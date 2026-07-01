@@ -691,16 +691,27 @@ transform:translate(-50%,10px);
 
 }
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
-  nav ul{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-    width:100%;
+  nav {
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 8%;
   }
 
-  .nav-btn{
-    display:block;
+  nav ul {
+    display: flex;
+    flex-direction: row;   /* 👈 makes it sideways */
+    gap: 15px;
+    width: auto;
+    margin-left: auto;
+  }
+
+  nav ul li a {
+    font-size: 14px;
+  }
+
+  .nav-btn {
+    display: none; /* optional: hides button to save space */
   }
 }
