@@ -25,7 +25,12 @@ backdrop-filter:blur(18px);
 border-bottom:1px solid rgba(255,255,255,0.08);
 z-index:1000;
 }
-
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
 .logo-img{
 width:55px;
 filter:drop-shadow(0 0 10px rgba(0,212,255,0.3));
@@ -44,6 +49,11 @@ font-weight:500;
 transition:.3s;
 position:relative;
 }
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -56,6 +66,7 @@ nav ul li a:hover{
 color:#00d4ff;
 text-shadow:0 0 10px rgba(0,212,255,0.6);
 }
+
 
 /* HERO */
 .hero{
@@ -682,30 +693,14 @@ transform:translate(-50%,10px);
 
 @media(max-width:900px){
 
-.hero h1{
+  nav ul{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    width:100%;
+  }
 
-font-size:58px;
-
-letter-spacing:-2px;
-
-}
-
-.hero-description{
-
-font-size:17px;
-
-}
-
-nav ul{
-
-display:none;
-
-}
-
-.nav-btn{
-
-display:none;
-
-}
-
+  .nav-btn{
+    display:block;
+  }
 }
