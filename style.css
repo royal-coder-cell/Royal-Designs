@@ -10,6 +10,9 @@ background:#0b0b0f;
 color:white;
 overflow-x:hidden;
 }
+body {
+  padding-top: 80px;
+}
 
 /* NAV - GLASS EFFECT */
 nav{
@@ -241,84 +244,6 @@ color:#aaa;
 margin-bottom:20px;
 }
 
-/* FOOTER */
-footer{
-text-align:center;
-padding:30px;
-background:rgba(255,255,255,0.02);
-border-top:1px solid rgba(255,255,255,0.05);
-.socials-section{
-text-align:center;
-padding:100px 8%;
-background:rgba(255,255,255,0.02);
-border-top:1px solid rgba(255,255,255,0.05);
-border-bottom:1px solid rgba(255,255,255,0.05);
-backdrop-filter:blur(15px);
-}
-
-/* Title */
-.socials-section h2{
-font-size:38px;
-margin-bottom:20px;
-letter-spacing:-1px;
-font-weight:700;
-}
-
-/* Social links container */
-.socials{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-margin:25px 0;
-}
-
-/* Social buttons */
-.socials a{
-display:flex;
-align-items:center;
-gap:10px;
-padding:14px 22px;
-border-radius:999px;
-
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-
-color:#ccc;
-text-decoration:none;
-font-weight:500;
-
-transition:0.3s ease;
-backdrop-filter:blur(10px);
-}
-
-/* Icons */
-.socials a i{
-font-size:18px;
-color:#00d4ff;
-transition:0.3s;
-}
-
-/* Hover effect (neon glow) */
-.socials a:hover{
-transform:translateY(-4px);
-border-color:#00d4ff;
-box-shadow:0 0 25px rgba(0,212,255,0.4);
-color:#00d4ff;
-}
-
-.socials a:hover i{
-color:#00d4ff;
-text-shadow:0 0 10px rgba(0,212,255,0.6);
-}
-
-/* Phone text */
-.socials-section p{
-margin-top:20px;
-color:#aaa;
-font-size:15px;
-}
-}
 
 /* ANIMATION */
 .reveal{
@@ -714,4 +639,82 @@ transform:translate(-50%,10px);
   .nav-btn {
     display: none; /* optional: hides button to save space */
   }
+}
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+background:rgba(255,255,255,0.02);
+border-top:1px solid rgba(255,255,255,0.05);
+.socials-section{
+text-align:center;
+padding:100px 8%;
+background:rgba(255,255,255,0.02);
+border-top:1px solid rgba(255,255,255,0.05);
+border-bottom:1px solid rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+}
+
+/* Title */
+.socials-section h2{
+font-size:38px;
+margin-bottom:20px;
+letter-spacing:-1px;
+font-weight:700;
+}
+
+/* Social links container */
+.socials{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin:25px 0;
+}
+
+/* Social buttons */
+.socials a{
+display:flex;
+align-items:center;
+gap:10px;
+padding:14px 22px;
+border-radius:999px;
+
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+
+color:#ccc;
+text-decoration:none;
+font-weight:500;
+
+transition:0.3s ease;
+backdrop-filter:blur(10px);
+}
+
+/* Icons */
+.socials a i{
+font-size:18px;
+color:#00d4ff;
+transition:0.3s;
+}
+
+/* Hover effect (neon glow) */
+.socials a:hover{
+transform:translateY(-4px);
+border-color:#00d4ff;
+box-shadow:0 0 25px rgba(0,212,255,0.4);
+color:#00d4ff;
+}
+
+.socials a:hover i{
+color:#00d4ff;
+text-shadow:0 0 10px rgba(0,212,255,0.6);
+}
+
+/* Phone text */
+.socials-section p{
+margin-top:20px;
+color:#aaa;
+font-size:15px;
+}
 }
