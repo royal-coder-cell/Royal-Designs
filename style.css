@@ -757,4 +757,75 @@ margin-top:20px;
 color:#aaa;
 font-size:15px;
 }
+/* =========================
+   RESPONSIVE NAVBAR
+========================= */
+
+.menu-toggle{
+    display:none;
+    font-size:28px;
+    color:white;
+    cursor:pointer;
+}
+
+@media (max-width:768px){
+
+    nav{
+        padding:18px 6%;
+    }
+
+    .menu-toggle{
+        display:block;
+        z-index:1001;
+    }
+
+    .nav-btn{
+        display:none;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:#111;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+        padding:30px 0;
+        display:none;
+        border-top:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .hero{
+        padding:120px 6% 60px;
+        height:auto;
+        min-height:100vh;
+    }
+
+    .hero h1{
+        font-size:42px;
+        line-height:1.1;
+        letter-spacing:-2px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+        width:100%;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+        width:100%;
+        text-align:center;
+    }
 }

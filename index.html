@@ -17,16 +17,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 </head>
 
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+
 <body>
 
 <!-- ================= NAVIGATION ================= -->
 
-<nav>
+    <nav>
     <a href="index.html" class="logo">
         <img src="logo1.png" alt="Royal Designs" class="logo-img">
     </a>
 
-    <ul>
+    <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="services.html">Services</a></li>
@@ -35,8 +44,12 @@
     </ul>
 
     <a href="contact.html" class="nav-btn">Let's Talk</a>
-    <ul class="nav-links"></ul>
+
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
 </nav>
+
 
 
 <!-- ================= HERO ================= -->
