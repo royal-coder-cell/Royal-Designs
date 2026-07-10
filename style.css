@@ -965,21 +965,166 @@ font-size:15px;
     }
 }
 
-.swiper{
-    width:100%;
-    height:100%;
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
 }
 
-.swiper-slide img{
+.carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel {
+    scrollbar-width: none;
+}
+
+
+/* ADD THIS */
+/* BOOK CAROUSEL */
+
+.portfolio-item:has(.carousel){
+    height:500px;
+}
+
+.carousel{
+    display:flex;
+    width:100%;
+    height:100%;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+}
+
+.carousel img{
+    flex:0 0 100%;
     width:100%;
     height:100%;
     object-fit:cover;
+    scroll-snap-align:start;
+    border-radius:18px;
 }
 
-.swiper-pagination-bullet{
-    background:#fff;
+
+.carousel::-webkit-scrollbar{
+    display:none;
+}
 }
 
-.swiper-pagination-bullet-active{
-    background:#00d4ff;
+.test-carousel {
+    display: flex;
+    width: 400px;
+    height: 500px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.test-carousel img {
+    min-width: 400px;
+    height: 500px;
+    object-fit: cover;
+    scroll-snap-align: start;
+}
+
+.test-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.bookSwiper{
+    width:100%;
+    aspect-ratio:4 / 5;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.bookSwiper .swiper-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* =========================
+   MOBILE PORTFOLIO FIX
+========================= */
+
+@media(max-width:768px){
+
+    .portfolio{
+        width:94%;
+        padding:50px 0;
+    }
+
+    .portfolio-grid{
+        column-count:2;
+        column-gap:12px;
+    }
+
+    .portfolio-item{
+        margin-bottom:12px;
+        border-radius:14px;
+    }
+
+    .portfolio-item img{
+        border-radius:14px;
+    }
+
+    .overlay{
+        padding:15px;
+    }
+
+    .overlay h3{
+        font-size:14px;
+    }
+
+    .overlay p{
+        font-size:12px;
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .portfolio-grid{
+        column-count:2;
+        column-gap:10px;
+    }
+
+}
+
+
+/* BOOK CAROUSEL */
+
+.bookSwiper{
+    width:100%;
+    aspect-ratio:4 / 5;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.bookSwiper .swiper-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
 }

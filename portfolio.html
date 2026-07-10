@@ -17,22 +17,6 @@ href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 <script>
 
-new Swiper(".bookSwiper",{
-
-    loop:true,
-
-    pagination:{
-        el:".swiper-pagination",
-        clickable:true
-    },
-
-    grabCursor:true,
-
-    slidesPerView:1,
-
-    spaceBetween:0,
-
-});
 
 </script>
 
@@ -131,30 +115,28 @@ new Swiper(".bookSwiper",{
             </div>
         </div>
 
-       <div class="portfolio-item reveal">
+        <div class="test-carousel">
+</div>
+<div class="portfolio-item tall reveal">
 
     <div class="swiper bookSwiper">
 
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="1-david.jpg.png" alt="">
-            </div>
-
 
             <div class="swiper-slide">
-                <img src="2-david.jpg.png" alt="">
+                <img src="1-david.jpg" alt="">
             </div>
 
             <div class="swiper-slide">
-                <img src="3-david.jpg.png" alt="">
+                <img src="3-david.jpg" alt="">
             </div>
 
             <div class="swiper-slide">
-                <img src="4-david.jpg.png" alt="">
+                <img src="4-david.jpg" alt="">
             </div>
 
             <div class="swiper-slide">
-                <img src="5-david.jpg.png" alt="">
+                <img src="5-david.jpg" alt="">
             </div>
 
         </div>
@@ -163,13 +145,16 @@ new Swiper(".bookSwiper",{
 
     </div>
 
+
     <div class="overlay">
-        <h3>Book Cover Collection</h3>
-        <p>Book Design</p>
+        <h3>Instagram Carousel posts</h3>
+        <p>Carousel</p>
     </div>
 
 </div>
 
+
+</div>
 
         <div class="portfolio-item reveal">
             <img src="images/work4.jpg" alt="">
@@ -244,5 +229,23 @@ new Swiper(".bookSwiper",{
         </div>
 
     </div>
+    <script>
+new Swiper(".bookSwiper", {
+
+    loop:true,
+
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true
+    },
+
+    grabCursor:true,
+
+    slidesPerView:1,
+
+    spaceBetween:0
+
+});
+</script>
 
 </section>
