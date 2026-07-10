@@ -1,47 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-<title>Portfolio - Royal Designs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us - Royal Designs</title>
+
 <link rel="stylesheet" href="style.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter, Arial, sans-serif;
+}
+
+body{
+    background:#050505;
+    color:white;
+}
+
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:25px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:relative;
+    z-index:10;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:white;
+}
+
+.logo span{
+    color:#00d4ff;
+}
+
+nav ul{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#00d4ff;
+}
+
+
+/* CONTACT SECTION */
+
+.contact-section{
+
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 8%;
+}
+
+
+.contact-container{
+
+    width:100%;
+    max-width:1100px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+
+}
+
+
+/* LEFT SIDE */
+
+.contact-info h1{
+
+    font-size:55px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+
+.contact-info h1 span{
+
+    color:#00d4ff;
+
+}
+
+
+.contact-info p{
+
+    color:#aaa;
+    font-size:18px;
+    line-height:1.7;
+    margin-bottom:35px;
+
+}
+
+
+
+.info-box{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+
+}
+
+
+.info-box i{
+
+    width:45px;
+    height:45px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#00d4ff;
+    color:black;
+
+}
+
+
+.info-box span{
+
+    color:#ddd;
+
+}
+
+
+
+/* FORM */
+
+.contact-form{
+
+    background:#111;
+    padding:40px;
+    border-radius:20px;
+    border:1px solid rgba(0,212,255,.2);
+
+}
+
+
+.contact-form input,
+.contact-form textarea{
+
+    width:100%;
+    background:#080808;
+    border:1px solid #222;
+    padding:15px;
+    margin-bottom:20px;
+    border-radius:10px;
+    color:white;
+    outline:none;
+    transition:.3s;
+
+}
+
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+    border-color:#00d4ff;
+
+}
+
+
+
+.contact-form textarea{
+
+    height:150px;
+    resize:none;
+
+}
+
+
+
+.contact-btn{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:100px;
+    background:#00d4ff;
+    color:black;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+
+
+.contact-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 0 20px rgba(0,212,255,.8),
+    0 0 50px rgba(0,212,255,.3);
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.contact-container{
+
+    grid-template-columns:1fr;
+
+}
+
+
+.contact-info h1{
+
+    font-size:40px;
+
+}
+
+
+nav ul{
+
+    gap:15px;
+
+}
+
+}
+
+</style>
+
 </head>
+
+<script>
+
+function sendWhatsApp(){
+
+let name = document.getElementById("name").value;
+
+let email = document.getElementById("email").value;
+
+let project = document.getElementById("project").value;
+
+let message = document.getElementById("message").value;
+
+
+// Change this to your WhatsApp number
+let phoneNumber = "263779798271";
+
+
+let text = 
+"Hello Royal Designs,%0A%0A" +
+"Name: " + name + "%0A" +
+"Email: " + email + "%0A" +
+"Project Type: " + project + "%0A%0A" +
+"Project Details:%0A" + message;
+
+
+let whatsappURL = 
+"https://wa.me/" + phoneNumber + "?text=" + text;
+
+
+window.open(whatsappURL, "_blank");
+
+
+}
+
+</script>
 
 <body>
 
-<nav>
-    <div class="logo">
-        <img src="logo1.png" class="logo-img">
-    </div>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+Royal<span>Designs</span>
+</div>
+
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="portfolio.html">Portfolio</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+
 </nav>
 
-<section class="page-hero">
-    <h1 class="reveal">Featured Work</h1>
-    <p class="reveal">A showcase of branding and design projects.</p>
-</section>
 
-<section class="portfolio">
 
-<div class="grid">
+<!-- CONTACT -->
 
-<div class="project reveal">Brand Identity 01</div>
-<div class="project reveal">Logo Design 02</div>
-<div class="project reveal">Social Media 03</div>
-<div class="project reveal">Packaging 04</div>
-<div class="project reveal">Brand Kit 05</div>
-<div class="project reveal">Poster Design 06</div>
+
+<section class="contact-section">
+
+
+<div class="contact-container">
+
+
+<div class="contact-info">
+
+<h1>
+Let's Create Something <span>Great</span>
+</h1>
+
+
+<p>
+Have a project in mind? Whether it's branding,
+poster design, social media graphics or a complete
+visual identity, let's bring your ideas to life.
+</p>
+
+
+
+<div class="info-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<span>
+royaldesigns@email.com
+</span>
 
 </div>
 
+
+
+<div class="info-box">
+
+<i class="fa-solid fa-phone"></i>
+
+<span>
++263 77 979 8271
+</span>
+
+</div>
+
+
+
+<div class="info-box">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<span>
+Worldwide
+</span>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="contact-form">
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input id="name" type="text" placeholder="Your Name" required>
+
+<input id="email" type="email" placeholder="Your Email" required>
+
+<input id="project" type="text" placeholder="Project Type" required>
+
+<textarea id="message" placeholder="Tell us about your project" required></textarea>
+
+<button class="contact-btn">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+
+
+</div>
+
+
 </section>
+
+
 
 </body>
 </html>
