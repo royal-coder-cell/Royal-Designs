@@ -74,7 +74,7 @@ text-shadow:0 0 10px rgba(0,212,255,0.6);
 
 
 /* HERO */
-..hero{
+.hero{
     padding:20px 6% 60px;
 }
 .hero-text{
@@ -88,7 +88,7 @@ font-size:12px;
 opacity:0.8;
 }
 
-..hero h1{
+.hero h1{
     font-size:90px;
 }
 
@@ -856,4 +856,130 @@ font-size:15px;
     width:100%;
 }
 
+}
+
+/* ===== MASONRY PORTFOLIO ===== */
+
+.portfolio{
+    width:92%;
+    max-width:1600px;
+    margin:auto;
+    padding:80px 0;
+}
+
+.portfolio-filter{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    margin-bottom:50px;
+}
+
+.portfolio-filter button{
+    padding:12px 22px;
+    border-radius:30px;
+    background:transparent;
+    border:1px solid rgba(255,255,255,.15);
+    color:#fff;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.portfolio-filter button:hover,
+.portfolio-filter .active{
+    background:#00d4ff;
+    color:#000;
+}
+
+/* Masonry Layout */
+
+.portfolio-grid{
+    column-count:4;
+    column-gap:22px;
+}
+
+.portfolio-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+    margin-bottom:22px;
+    break-inside:avoid;
+    cursor:pointer;
+}
+
+.portfolio-item img{
+    width:100%;
+    display:block;
+    border-radius:18px;
+    transition:.5s;
+}
+
+.portfolio-item:hover img{
+    transform:scale(1.05);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:25px;
+    background:linear-gradient(to top,
+        rgba(0,0,0,.9),
+        rgba(0,0,0,.15));
+    opacity:0;
+    transition:.4s;
+}
+
+.portfolio-item:hover .overlay{
+    opacity:1;
+}
+
+/* Ignore old classes */
+
+.large,
+.wide,
+.tall{
+    grid-column:unset;
+    grid-row:unset;
+}
+
+/* Responsive */
+
+@media(max-width:1200px){
+    .portfolio-grid{
+        column-count:3;
+    }
+}
+
+@media(max-width:768px){
+    .portfolio-grid{
+        column-count:2;
+    }
+}
+
+@media(max-width:500px){
+    .portfolio-grid{
+        column-count:1;
+    }
+}
+
+.swiper{
+    width:100%;
+    height:100%;
+}
+
+.swiper-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.swiper-pagination-bullet{
+    background:#fff;
+}
+
+.swiper-pagination-bullet-active{
+    background:#00d4ff;
 }

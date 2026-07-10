@@ -1,47 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<title>Portfolio - Royal Designs</title>
-<link rel="stylesheet" href="style.css">
-</head>
+    <title>Portfolio - Royal Designs</title>
 
+    <link rel="stylesheet" href="style.css">
+
+    <link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
 <body>
 
-<nav>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+new Swiper(".bookSwiper",{
+
+    loop:true,
+
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true
+    },
+
+    grabCursor:true,
+
+    slidesPerView:1,
+
+    spaceBetween:0,
+
+});
+
+</script>
+
+    <script src="script.js"></script>
+
+    <nav>
     <div class="logo">
         <img src="logo1.png" class="logo-img">
     </div>
-
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
-<section class="page-hero">
-    <h1 class="reveal">Featured Work</h1>
-    <p class="reveal">A showcase of branding and design projects.</p>
-</section>
+    </nav>
 
 <section class="portfolio">
 
-<div class="grid">
+    <div class="portfolio-filter reveal">
+        <button class="active">All</button>
+        <button>Branding</button>
+        <button>Logos</button>
+        <button>Social Media</button>
+        <button>Print</button>
+        <button>Packaging</button>
+        <button>Web Design</button>
+    </div>
+    
 
-<div class="project reveal">Brand Identity 01</div>
-<div class="project reveal">Logo Design 02</div>
-<div class="project reveal">Social Media 03</div>
-<div class="project reveal">Packaging 04</div>
-<div class="project reveal">Brand Kit 05</div>
-<div class="project reveal">Poster Design 06</div>
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item large reveal">
+            <img src="Thum 1.png" alt="">
+            <div class="overlay">
+                <h3>Thumbnails</h3>
+                <p>Branding</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+            <img src="chur 2.png" alt="">
+            <div class="overlay">
+                <h3>Church Flyer</h3>
+                <p>Social Media</p>
+            </div>
+        </div>
+
+         <div class="portfolio-item tall reveal">
+            <img src="social B1.png" alt="">
+            <div class="overlay">
+                <h3>Social Media Banner</h3>
+                <p>Digital Banners</p>
+            </div>
+        </div>
+
+<div class="portfolio-item tall reveal">
+            <img src="digit 1.png" alt="">
+            <div class="overlay">
+                <h3>Digital Art</h3>
+                <p>Digital Artowrks</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item tall reveal">
+            <img src="ban 1.png" alt="">
+            <div class="overlay">
+                <h3>Banners</h3>
+                <p>Printing Banners</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item tall reveal">
+            <img src="Alb cv 1.png" alt="">
+            <div class="overlay">
+                <h3>Album cover</h3>
+                <p>Music Artworks</p>
+            </div>
+        </div>
+
+ <div class="portfolio-item tall reveal">
+            <img src="eve 1.png" alt="">
+            <div class="overlay">
+                <h3>Events flyers</h3>
+                <p>Events Posters/Flyers</p>
+            </div>
+        </div>
+
+ <div class="portfolio-item tall reveal">
+            <img src="log 1.png" alt="">
+            <div class="overlay">
+                <h3>Logo Designs</h3>
+                <p>Logo Designs and Icons</p>
+            </div>
+        </div>
+
+ <div class="portfolio-item tall reveal">
+            <img src="book 1.png" alt="">
+            <div class="overlay">
+                <h3>Book Cover</h3>
+                <p>Book Design</p>
+            </div>
+        </div>
+
+       <div class="portfolio-item reveal">
+
+    <div class="swiper bookSwiper">
+
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="1-david.jpg.png" alt="">
+            </div>
+
+
+            <div class="swiper-slide">
+                <img src="2-david.jpg.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="3-david.jpg.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="4-david.jpg.png" alt="">
+            </div>
+
+            <div class="swiper-slide">
+                <img src="5-david.jpg.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <div class="overlay">
+        <h3>Book Cover Collection</h3>
+        <p>Book Design</p>
+    </div>
 
 </div>
 
-</section>
 
-</body>
-</html>
+        <div class="portfolio-item reveal">
+            <img src="images/work4.jpg" alt="">
+            <div class="overlay">
+                <h3>Packaging Design</h3>
+                <p>Packaging</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+            <img src="images/work5.jpg" alt="">
+            <div class="overlay">
+                <h3>Instagram Carousel</h3>
+                <p>Social Media</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item wide reveal">
+            <img src="images/work6.jpg" alt="">
+            <div class="overlay">
+                <h3>Website UI</h3>
+                <p>Web Design</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+            <img src="images/work7.jpg" alt="">
+            <div class="overlay">
+                <h3>Event Poster</h3>
+                <p>Print</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+            <img src="images/work8.jpg" alt="">
+            <div class="overlay">
+                <h3>Corporate Branding</h3>
+                <p>Branding</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item tall reveal">
+            <img src="images/work9.jpg" alt="">
+            <div class="overlay">
+                <h3>Magazine Cover</h3>
+                <p>Print</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+            <img src="images/work10.jpg" alt="">
+            <div class="overlay">
+                <h3>Business Cards</h3>
+                <p>Branding</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item reveal">
+            <img src="images/work11.jpg" alt="">
+            <div class="overlay">
+                <h3>Restaurant Menu</h3>
+                <p>Print</p>
+            </div>
+        </div>
+
+        <div class="portfolio-item large reveal">
+            <img src="images/work12.jpg" alt="">
+            <div class="overlay">
+                <h3>Complete Brand Kit</h3>
+                <p>Brand Identity</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
