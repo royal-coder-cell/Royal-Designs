@@ -1145,3 +1145,56 @@ font-size:15px;
     0 0 20px rgba(0,212,255,.7),
     0 0 40px rgba(0,212,255,.3);
 }
+
+.button-group{
+    display:flex;
+    gap:15px;
+    margin-top:10px;
+}
+
+.email-btn,
+.whatsapp-btn{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:100px;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.email-btn{
+    background:#ffffff;
+    color:#000;
+}
+
+.email-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(255,255,255,.3);
+}
+
+.whatsapp-btn{
+    background:#00d4ff;
+    color:#000;
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+    0 0 20px rgba(0,212,255,.8),
+    0 0 50px rgba(0,212,255,.3);
+}
+
+.email-btn i,
+.whatsapp-btn i{
+    margin-right:8px;
+}
+
+@media(max-width:600px){
+
+.button-group{
+    flex-direction:column;
+}
+
+}
