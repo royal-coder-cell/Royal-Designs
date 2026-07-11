@@ -287,18 +287,18 @@ let whatsappURL =
 window.open(whatsappURL, "_blank");
 
 
+function sendEmail() {
+
+let name = document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+let project = document.getElementById("project").value.trim();
+let message = document.getElementById("message").value.trim();
+
+// Check that all fields are filled
+if(name === "" || email === "" || project === "" || message === ""){
+    alert("Please fill in all the fields.");
+    return;
 }
-
-function sendEmail(){
-    if (!validateForm()) return;
-
-let name = document.getElementById("name").value;
-
-let email = document.getElementById("email").value;
-
-let project = document.getElementById("project").value;
-
-let message = document.getElementById("message").value;
 
 let subject = encodeURIComponent("New Project Enquiry - " + project);
 
@@ -309,8 +309,9 @@ let body = encodeURIComponent(
 "\n\nProject Details:\n" + message
 );
 
+// Replace with YOUR email
 window.location.href =
-"mailto:your@email.com?subject=" + subject + "&body=" + body;
+"mailto:emmanuelchiroto10@gmail.com?subject=" + subject + "&body=" + body;
 
 }
 

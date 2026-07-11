@@ -1514,3 +1514,37 @@ font-size:14px;
     transform:translateY(-6px) scale(1.08);
     box-shadow:0 15px 40px rgba(0,212,255,.6);
 }
+.button-group{
+    display:flex;
+    gap:15px;
+}
+
+.email-btn,
+.whatsapp-btn{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.email-btn{
+    background:#ffffff;
+    color:#111;
+}
+
+.email-btn:hover{
+    background:#e5e5e5;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+}
+
+.whatsapp-btn:hover{
+    background:#1da851;
+}
