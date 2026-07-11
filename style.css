@@ -1548,3 +1548,35 @@ font-size:14px;
 .whatsapp-btn:hover{
     background:#1da851;
 }
+/* ===========================
+   PORTFOLIO SPACING FIX
+   =========================== */
+
+.portfolio{
+    padding-top: 20px !important;
+    margin-top: 0 !important;
+}
+
+.portfolio-filter{
+    margin-bottom: 30px !important;
+}
+
+.portfolio-section{
+    padding-top: 20px !important;
+    margin-top: 0 !important;
+}
+
+.section-title{
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    padding-top: 0 !important;
+}
+
+.section-note{
+    margin-top: 0 !important;
+    margin-bottom: 30px !important;
+}
+
+.portfolio-grid{
+    margin-top: 0 !important;
+}
