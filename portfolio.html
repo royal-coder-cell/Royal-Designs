@@ -3,274 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Royal Designs</title>
+
+    <meta name="description" content="Royal Designs Portfolio">
+
+    <title>Portfolio | Royal Designs</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link
-rel="stylesheet"
-href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
+
 <body>
+    <nav>
+        <div class="logo"><img src="logo1.png" class="logo-img" alt="Royal Designs"></div>
+        <a href="index.html" class="home-btn">Home</a>
+    </nav>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-
-
-</script>
-
-    <script src="script.js"></script>
-
-  <nav>
-    <div class="logo">
-        <img src="logo1.png" class="logo-img">
-    </div>
-
-    <a href="index.html" class="home-btn">
-        Home
-    </a>
-</nav>
-<section class="portfolio">
-
-    <div class="portfolio-filter reveal">
-        <button class="active">All</button>
-        <button>Branding</button>
-        <button>Logos</button>
-        <button>Social Media</button>
-        <button>Print</button>
-        <button>Packaging</button>
-        <button>Web Design</button>
-    </div>
-    
-
-    <div class="portfolio-grid">
-
-        <div class="portfolio-item large reveal">
-            <img src="Thum 1.png" alt="">
-            <div class="overlay">
-                <h3>Thumbnails</h3>
-                <p>Branding</p>
-            </div>
+    <main class="portfolio">
+        <div class="portfolio-filter" aria-label="Portfolio categories">
+            <a class="active" href="#portfolio">Portfolio</a>
+            <a href="#branding">Branding</a>
+            <a href="#logos">Logos</a>
+            <a href="#social">Social Media</a>
+            <a href="#print">Print</a>
+            <a href="#packaging">Packaging</a>
         </div>
 
-        <div class="portfolio-item reveal">
-            <img src="chur 2.png" alt="">
-            <div class="overlay">
-                <h3>Church Flyer</h3>
-                <p>Social Media</p>
+        <!-- Your first 13 images. Clicking one opens its category below. -->
+        <section class="portfolio-section" id="portfolio">
+            <h1 class="section-title">Portfolio</h1>
+            <p class="section-note">Select a project to see more work from the same category.</p>
+            <div class="portfolio-grid">
+                <article class="portfolio-item"><a class="portfolio-link" href="#branding"><img src="Thum 1.png" alt="Thumbnails design"><div class="overlay"><h3>Thumbnails</h3><p>Branding</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#social"><img src="chur 2.png" alt="Church flyer"><div class="overlay"><h3>Church Flyer</h3><p>Social Media</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#social"><img src="social B1.png" alt="Social media banner"><div class="overlay"><h3>Social Media Banner</h3><p>Social Media</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#branding"><img src="digit 1.png" alt="Digital artwork"><div class="overlay"><h3>Digital Art</h3><p>Branding</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#print"><img src="ban 1.png" alt="Banner design"><div class="overlay"><h3>Banners</h3><p>Print</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#print"><img src="Alb cv 1.png" alt="Album cover"><div class="overlay"><h3>Album Cover</h3><p>Print</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#print"><img src="eve 1.png" alt="Events flyer"><div class="overlay"><h3>Events Flyers</h3><p>Print</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#logos"><img src="log 1.png" alt="Logo designs"><div class="overlay"><h3>Logo Designs</h3><p>Logos</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#print"><img src="book 1.png" alt="Book cover"><div class="overlay"><h3>Book Cover</h3><p>Print</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#packaging"><img src="prod 1.jpg" alt="Product packaging"><div class="overlay"><h3>Packaging Design</h3><p>Packaging</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#social"><img src="t shirt 1.png" alt="Instagram carousel"><div class="overlay"><h3>Instagram Carousel</h3><p>Social Media</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#print"><img src="tick 1.png" alt="Ticket design"><div class="overlay"><h3>Ticket Design</h3><p>Print</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#social"><img src="images/work5.jpg" alt="Instagram carousel post"><div class="overlay"><h3>Instagram Carousel</h3><p>Social Media</p></div></a></article>
             </div>
-        </div>
+        </section>
 
-         <div class="portfolio-item tall reveal">
-            <img src="social B1.png" alt="">
-            <div class="overlay">
-                <h3>Social Media Banner</h3>
-                <p>Digital Banners</p>
-            </div>
-        </div>
+        <!-- Each category has 10 positions: one main picture and nine slots for your own images. -->
+        <section class="portfolio-section" id="branding"><h2 class="section-title">Branding</h2><p class="section-note">One main image is included. Add nine more branding projects below it.</p><div class="portfolio-grid">
+            <article class="portfolio-item"><img class="category-image" src="Thum 1.png" alt="Branding main image"><div class="overlay"><h3>Main Branding Project</h3><p>Branding</p></div></article>
+            <article class="portfolio-item placeholder-card"><span><strong>Branding image 02</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Branding image 03</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Branding image 04</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Branding image 05</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Branding image 06</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Branding image 07</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Branding image 08</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Branding image 09</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Branding image 10</strong><small>Add your image here</small></span></article>
+        </div></section>
 
-<div class="portfolio-item tall reveal">
-            <img src="digit 1.png" alt="">
-            <div class="overlay">
-                <h3>Digital Art</h3>
-                <p>Digital Artowrks</p>
-            </div>
-        </div>
+        <section class="portfolio-section" id="logos"><h2 class="section-title">Logo Designs</h2><p class="section-note">One main image is included. Add nine more logo projects below it.</p><div class="portfolio-grid">
+            <article class="portfolio-item"><img class="category-image" src="log 1.png" alt="Logo design main image"><div class="overlay"><h3>Main Logo Project</h3><p>Logos</p></div></article>
+            <article class="portfolio-item placeholder-card"><span><strong>Logo image 02</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Logo image 03</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Logo image 04</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Logo image 05</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Logo image 06</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Logo image 07</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Logo image 08</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Logo image 09</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Logo image 10</strong><small>Add your image here</small></span></article>
+        </div></section>
 
-        <div class="portfolio-item tall reveal">
-            <img src="ban 1.png" alt="">
-            <div class="overlay">
-                <h3>Banners</h3>
-                <p>Printing Banners</p>
-            </div>
-        </div>
+        <section class="portfolio-section" id="social"><h2 class="section-title">Social Media</h2><p class="section-note">One main image is included. Add nine more social-media projects below it.</p><div class="portfolio-grid">
+            <article class="portfolio-item"><img class="category-image" src="social B1.png" alt="Social media main image"><div class="overlay"><h3>Main Social Media Project</h3><p>Social Media</p></div></article>
+            <article class="portfolio-item placeholder-card"><span><strong>Social image 02</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Social image 03</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Social image 04</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Social image 05</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Social image 06</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Social image 07</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Social image 08</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Social image 09</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Social image 10</strong><small>Add your image here</small></span></article>
+        </div></section>
 
-        <div class="portfolio-item tall reveal">
-            <img src="Alb cv 1.png" alt="">
-            <div class="overlay">
-                <h3>Album cover</h3>
-                <p>Music Artworks</p>
-            </div>
-        </div>
+        <section class="portfolio-section" id="print"><h2 class="section-title">Print Design</h2><p class="section-note">One main image is included. Add nine more print projects below it.</p><div class="portfolio-grid">
+            <article class="portfolio-item"><img class="category-image" src="ban 1.png" alt="Print design main image"><div class="overlay"><h3>Main Print Project</h3><p>Print Design</p></div></article>
+            <article class="portfolio-item placeholder-card"><span><strong>Print image 02</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Print image 03</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Print image 04</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Print image 05</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Print image 06</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Print image 07</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Print image 08</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Print image 09</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Print image 10</strong><small>Add your image here</small></span></article>
+        </div></section>
 
- <div class="portfolio-item tall reveal">
-            <img src="eve 1.png" alt="">
-            <div class="overlay">
-                <h3>Events flyers</h3>
-                <p>Events Posters/Flyers</p>
-            </div>
-        </div>
-
- <div class="portfolio-item tall reveal">
-            <img src="log 1.png" alt="">
-            <div class="overlay">
-                <h3>Logo Designs</h3>
-                <p>Logo Designs and Icons</p>
-            </div>
-        </div>
-
- <div class="portfolio-item tall reveal">
-            <img src="book 1.png" alt="">
-            <div class="overlay">
-                <h3>Book Cover</h3>
-                <p>Book Design</p>
-            </div>
-        </div>
-
-           <div class="portfolio-item reveal">
-            <img src="prod 1.jpg" alt="">
-            <div class="overlay">
-                <h3>Packaging Design</h3>
-                <p>products Packaging</p>
-            </div>
-        </div>
-
-        
-        <div class="portfolio-item reveal">
-            <img src="t shirt 1.png" alt="">
-            <div class="overlay">
-                <h3>Instagram Carousel</h3>
-                <p>Social Media</p>
-            </div>
-        </div>
-
-
-
-        <div class="test-carousel">
-</div>
-<div class="portfolio-item tall reveal">
-
-    <div class="swiper bookSwiper">
-
-        <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-                <img src="1-david.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-                <img src="3-david.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-                <img src="4-david.jpg" alt="">
-            </div>
-
-            <div class="swiper-slide">
-                <img src="5-david.jpg" alt="">
-            </div>
-
-        </div>
-
-        <div class="swiper-pagination"></div>
-
-    </div>
-
-
-    <div class="overlay">
-        <h3>Instagram Carousel posts</h3>
-        <p>Carousel</p>
-    </div>
-
-</div>
-
-<div class="portfolio-item reveal">
-            <img src="tick 1.png" alt="">
-            <div class="overlay">
-                <h3>Tickets design</h3>
-                <p>Tickets</p>
-            </div>
-        </div>
-
-
-</div>
-
-
-
-        <div class="portfolio-item reveal">
-            <img src="images/work5.jpg" alt="">
-            <div class="overlay">
-                <h3>Instagram Carousel</h3>
-                <p>Social Media</p>
-            </div>
-        </div>
-
-        <div class="portfolio-item wide reveal">
-            <img src="images/work6.jpg" alt="">
-            <div class="overlay">
-                <h3>Website UI</h3>
-                <p>Web Design</p>
-            </div>
-        </div>
-
-        <div class="portfolio-item reveal">
-            <img src="images/work7.jpg" alt="">
-            <div class="overlay">
-                <h3>Event Poster</h3>
-                <p>Print</p>
-            </div>
-        </div>
-
-        <div class="portfolio-item reveal">
-            <img src="images/work8.jpg" alt="">
-            <div class="overlay">
-                <h3>Corporate Branding</h3>
-                <p>Branding</p>
-            </div>
-        </div>
-
-        <div class="portfolio-item tall reveal">
-            <img src="images/work9.jpg" alt="">
-            <div class="overlay">
-                <h3>Magazine Cover</h3>
-                <p>Print</p>
-            </div>
-        </div>
-
-        <div class="portfolio-item reveal">
-            <img src="images/work10.jpg" alt="">
-            <div class="overlay">
-                <h3>Business Cards</h3>
-                <p>Branding</p>
-            </div>
-        </div>
-
-        <div class="portfolio-item reveal">
-            <img src="images/work11.jpg" alt="">
-            <div class="overlay">
-                <h3>Restaurant Menu</h3>
-                <p>Print</p>
-            </div>
-        </div>
-
-        <div class="portfolio-item large reveal">
-            <img src="images/work12.jpg" alt="">
-            <div class="overlay">
-                <h3>Complete Brand Kit</h3>
-                <p>Brand Identity</p>
-            </div>
-        </div>
-
-    </div>
-
+        <section class="portfolio-section" id="packaging"><h2 class="section-title">Packaging</h2><p class="section-note">One main image is included. Add nine more packaging projects below it.</p><div class="portfolio-grid">
+            <article class="portfolio-item"><img class="category-image" src="prod 1.jpg" alt="Packaging main image"><div class="overlay"><h3>Main Packaging Project</h3><p>Packaging</p></div></article>
+            <article class="portfolio-item placeholder-card"><span><strong>Packaging image 02</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Packaging image 03</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Packaging image 04</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Packaging image 05</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Packaging image 06</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Packaging image 07</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Packaging image 08</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Packaging image 09</strong><small>Add your image here</small></span></article><article class="portfolio-item placeholder-card"><span><strong>Packaging image 10</strong><small>Add your image here</small></span></article>
+        </div></section>
+    </main>
+    <footer>© Royal Designs. All rights reserved.</footer>
     <script>
-new Swiper(".bookSwiper", {
+        document.querySelectorAll('.portfolio-filter a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelectorAll('.portfolio-filter a').forEach(function(button) { button.classList.remove('active'); });
+                link.classList.add('active');
+            });
+        });
+    </script>
 
-    loop:true,
+<a href="#" class="back-to-top" aria-label="Back to Top">
+    <span>↑</span>
+</a>
 
-    pagination:{
-        el:".swiper-pagination",
-        clickable:true
-    },
-
-    grabCursor:true,
-
-    slidesPerView:1,
-
-    spaceBetween:0
-
-});
-</script>
-
-</section>
+</body>
+</html>
