@@ -1580,3 +1580,445 @@ font-size:14px;
 .portfolio-grid{
     margin-top: 0 !important;
 }
+
+/* ================= INTRO ANIMATION ================= */
+
+.intro-screen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: removeIntro 4s forwards;
+}
+
+.intro-logo{
+    width: 140px;
+    opacity: 0;
+    transform: scale(.7);
+    animation: logoFade 1.3s ease forwards;
+}
+
+.intro-text{
+    color: white;
+    font-family: "Playfair Display", serif;
+    letter-spacing: 8px;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: textFade 1s ease forwards;
+    animation-delay: 1s;
+}
+
+
+/* WEBSITE FADE IN */
+
+.website-content{
+    opacity: 0;
+    animation: websiteFade 1s ease forwards;
+    animation-delay: 3.5s;
+}
+
+
+/* LOGO ANIMATION */
+
+@keyframes logoFade{
+
+    from{
+        opacity: 0;
+        transform: scale(.7);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* TEXT ANIMATION */
+
+@keyframes textFade{
+
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* REMOVE INTRO SCREEN */
+
+@keyframes removeIntro{
+
+    0%,80%{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100%{
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+}
+
+
+/* WEBSITE APPEARS */
+
+@keyframes websiteFade{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* INTRO SCREEN */
+
+.intro-screen{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:#000;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:1s ease;
+}
+
+.intro-logo{
+    width:140px;
+    animation:logoAnimation 1.5s ease;
+}
+
+.intro-screen h1{
+    color:white;
+    letter-spacing:6px;
+    margin-top:20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+Helvetica, Arial, sans-serif;
+}
+
+
+/* WEBSITE */
+
+.website-content{
+    opacity:0;
+    transition:1s ease;
+}
+
+.website-content.show{
+    opacity:1;
+}
+
+
+/* LOGO ANIMATION */
+
+@keyframes logoAnimation{
+
+    from{
+        opacity:0;
+        transform:scale(.5);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+.intro-screen h1 {
+    color: #ffffff;
+    margin-top: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+
+    /* Glow effect */
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.4),
+        0 0 15px rgba(255, 255, 255, 0.25),
+        0 0 30px rgba(255, 255, 255, 0.15);
+
+    /* Smooth fade in */
+    animation: glowFade 2s ease-in-out forwards;
+}@keyframes glowFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+        text-shadow: none;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow:
+            0 0 5px rgba(255, 255, 255, 0.4),
+            0 0 15px rgba(255, 255, 255, 0.25),
+            0 0 30px rgba(255, 255, 255, 0.15);
+    }
+}
+.intro-screen h1 {
+    animation: breathingGlow 2s ease-in-out infinite;
+}
+
+@keyframes breathingGlow {
+    0% {
+        text-shadow:
+            0 0 5px rgba(255,255,255,.2),
+            0 0 10px rgba(255,255,255,.1);
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px rgba(255,255,255,.6),
+            0 0 25px rgba(255,255,255,.4),
+            0 0 40px rgba(255,255,255,.2);
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px rgba(255,255,255,.2),
+            0 0 10px rgba(255,255,255,.1);
+    }
+}
+/* SECTION TITLES */
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+
+/* QUOTE SECTION */
+
+.quote-section{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.quote-section h2{
+    font-size:3rem;
+    line-height:1.4;
+    max-width:900px;
+    margin:auto;
+}
+
+
+/* SKILLS */
+
+.skills-section{
+    padding:100px 10%;
+}
+
+.skill{
+    margin-bottom:30px;
+}
+
+.skill p{
+    margin-bottom:10px;
+}
+
+.bar{
+    width:100%;
+    height:12px;
+    border-radius:50px;
+    background:#222;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:50px;
+    background:white;
+}
+
+.fill-95{
+    width:95%;
+}
+
+.fill-100{
+    width:8
+    0%;
+}
+
+.fill-98{
+    width:98%;
+}
+
+.fill-90{
+    width:90%;
+}
+
+/* SKILL BAR WIDTHS */
+
+.fill-70{
+    width: 70%;
+}
+
+.fill-80{
+    width: 85%;
+}
+
+.fill-100{
+    width: 100%;
+}
+/* CTA */
+
+.cta-section{
+    padding:120px 10%;
+    text-align:center;
+}
+
+.cta-section h2{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.cta-section p{
+    margin-bottom:40px;
+}
+
+
+/* GLASS CARDS HOVER */
+
+.glass-card{
+    transition:.4s ease;
+}
+
+.glass-card:hover{
+    transform:translateY(-10px);
+}
+
+
+/* STATS HOVER */
+
+.stat{
+    transition:.4s ease;
+}
+
+.stat:hover{
+    transform:scale(1.05);
+}
+
+
+/* LOADER */
+
+#loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+    transition:1s ease;
+}
+
+
+.loader-content{
+    text-align:center;
+}
+
+
+.loader-content img{
+
+    width:170px;
+    animation:logoAnimation 2s infinite ease-in-out;
+
+}
+
+
+.loader-content h2{
+
+    color:white;
+    margin-top:25px;
+    letter-spacing:8px;
+    font-size:1.5rem;
+
+}
+
+
+.loader-content p{
+
+    color:#bdbdbd;
+    margin-top:10px;
+    letter-spacing:2px;
+    font-size:.9rem;
+
+}
+
+
+
+.loader-line{
+
+    width:280px;
+    height:3px;
+    background:#222;
+    margin-top:30px;
+    overflow:hidden;
+    border-radius:30px;
+
+}
+
+
+.loader-line span{
+
+    display:block;
+    height:100%;
+    width:100%;
+    background:white;
+    animation:loaderBar 1.8s infinite linear;
+
+}
+
+
+.loader-line{
+    width:280px;
+    height:3px;
+    background:#222;
+    margin:30px auto 0;
+    overflow:hidden;
+    border-radius:30px;
+    position:relative;
+}
+
+.loader-line span{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:50%;
+    background:white;
+    animation:loaderBar 1.8s infinite ease-in-out;
+}
