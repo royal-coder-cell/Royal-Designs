@@ -2022,3 +2022,271 @@ Helvetica, Arial, sans-serif;
     background:white;
     animation:loaderBar 1.8s infinite ease-in-out;
 }
+/* SERVICES PAGE */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#050505;
+color:white;
+overflow-x:hidden;
+}
+
+
+/* HERO */
+
+.services-hero{
+
+padding:150px 10%;
+text-align:center;
+}
+
+.services-hero h1{
+
+font-size:5rem;
+margin-bottom:20px;
+}
+
+.services-hero p{
+
+max-width:700px;
+margin:auto;
+font-size:1.2rem;
+line-height:1.8;
+color:#bdbdbd;
+}
+
+
+
+/* SERVICE CARDS */
+
+.service-card{
+
+padding:100px 10%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:60px;
+}
+
+
+.reverse{
+
+flex-direction:row-reverse;
+}
+
+
+.service-image{
+
+flex:1;
+}
+
+
+.service-image img{
+
+width:100%;
+border-radius:25px;
+transition:.4s;
+}
+
+
+.service-image img:hover{
+
+transform:scale(1.03);
+box-shadow:0 0 50px rgba(0,212,255,.4);
+
+}
+
+
+.service-content{
+
+flex:1;
+}
+
+
+.service-content span{
+
+font-size:5rem;
+font-weight:800;
+color:#00D4FF;
+}
+
+
+.service-content h2{
+
+font-size:3rem;
+margin-bottom:20px;
+}
+
+
+.service-content p{
+
+line-height:1.8;
+margin-bottom:30px;
+color:#d6d6d6;
+}
+
+
+.service-content ul{
+
+list-style:none;
+}
+
+
+.service-content ul li{
+
+margin-bottom:15px;
+font-size:1.1rem;
+position:relative;
+padding-left:25px;
+}
+
+
+.service-content ul li::before{
+
+content:"✓";
+position:absolute;
+left:0;
+color:#00D4FF;
+
+}
+
+
+
+/* STATS */
+
+
+.stats{
+
+padding:120px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+
+.stat-box{
+
+background:#111;
+padding:50px;
+text-align:center;
+border-radius:25px;
+transition:.4s;
+border:1px solid rgba(255,255,255,.08);
+}
+
+
+.stat-box:hover{
+
+transform:translateY(-10px);
+box-shadow:0 0 40px rgba(0,212,255,.2);
+
+}
+
+
+.stat-box h2{
+
+font-size:3rem;
+color:#00D4FF;
+}
+
+
+.stat-box p{
+
+margin-top:10px;
+color:#c9c9c9;
+}
+
+
+
+/* CTA */
+
+.cta{
+
+padding:150px 10%;
+text-align:center;
+}
+
+
+.cta h2{
+
+font-size:4rem;
+margin-bottom:30px;
+}
+
+
+.cta p{
+
+max-width:700px;
+margin:auto;
+line-height:1.8;
+color:#d6d6d6;
+margin-bottom:40px;
+}
+
+
+
+.cta-btn{
+
+padding:18px 40px;
+background:#00D4FF;
+color:black;
+text-decoration:none;
+font-weight:700;
+border-radius:50px;
+transition:.4s;
+display:inline-block;
+}
+
+
+.cta-btn:hover{
+
+transform:translateY(-5px);
+box-shadow:0 0 40px rgba(0,212,255,.5);
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.service-card{
+
+flex-direction:column;
+padding:80px 8%;
+
+}
+
+
+.reverse{
+
+flex-direction:column;
+}
+
+
+.services-hero h1{
+
+font-size:3rem;
+}
+
+
+.service-content h2{
+
+font-size:2rem;
+}
+
+
+.cta h2{
+
+font-size:2.5rem;
+}
+
+
+}
