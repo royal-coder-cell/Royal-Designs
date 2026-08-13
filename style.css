@@ -4411,3 +4411,1046 @@ font-size:2.5rem;
     }
 
 }
+
+/* =========================================================
+   ROYAL DESIGNS
+   FINAL MOBILE NAV + MOTION FIX
+========================================================= */
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Make sure the navbar is ALWAYS above everything */
+
+    nav {
+        position: fixed !important;
+
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        height: 70px !important;
+
+        z-index: 99999 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding: 0 6% !important;
+
+        background: rgba(3, 3, 3, 0.92) !important;
+
+        backdrop-filter: blur(18px) !important;
+        -webkit-backdrop-filter: blur(18px) !important;
+
+        border-bottom:
+            1px solid rgba(255,255,255,0.07) !important;
+    }
+
+
+    /* LOGO */
+
+    nav .logo {
+        display: flex !important;
+
+        align-items: center !important;
+
+        position: relative;
+
+        z-index: 100000;
+    }
+
+
+    nav .logo-img {
+        width: 42px !important;
+
+        height: auto !important;
+
+        display: block !important;
+    }
+
+
+    /* HAMBURGER */
+
+    nav .menu-toggle {
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        color: #fff !important;
+
+        cursor: pointer;
+
+        position: relative;
+
+        z-index: 100001;
+
+        background:
+            rgba(255,255,255,0.05) !important;
+
+        border:
+            1px solid rgba(255,255,255,0.12) !important;
+
+        border-radius: 50%;
+    }
+
+
+    nav .menu-toggle i {
+        font-size: 15px !important;
+    }
+
+
+    /* HIDE DESKTOP BUTTON */
+
+    nav .nav-btn {
+        display: none !important;
+    }
+
+
+    /* MOBILE MENU */
+
+    nav .nav-links {
+
+        position: fixed !important;
+
+        top: 70px !important;
+        right: -100% !important;
+
+        width: 100% !important;
+
+        height: calc(100svh - 70px) !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 28px !important;
+
+        padding: 30px !important;
+
+        margin: 0 !important;
+
+        background:
+            rgba(3,3,3,0.98) !important;
+
+        backdrop-filter: blur(25px) !important;
+        -webkit-backdrop-filter: blur(25px) !important;
+
+        z-index: 99998 !important;
+
+        transition:
+            right .4s cubic-bezier(.77,0,.18,1) !important;
+    }
+
+
+    nav .nav-links.active {
+        right: 0 !important;
+    }
+
+
+    nav .nav-links li {
+        list-style: none !important;
+    }
+
+
+    nav .nav-links a {
+
+        display: block !important;
+
+        color: #fff !important;
+
+        font-size: 20px !important;
+
+        text-decoration: none !important;
+
+        padding: 5px !important;
+    }
+
+
+    nav .nav-links a:hover {
+        color: #00d4ff !important;
+    }
+
+
+    /* Prevent the page from sitting underneath nav */
+
+    .hero {
+        padding-top: 70px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOTION SECTION — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .motion-section {
+
+        position: relative !important;
+
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        padding:
+            90px 6% 70px !important;
+
+        overflow: hidden !important;
+
+        z-index: 1 !important;
+
+        background: #030303 !important;
+    }
+
+
+    /* =========================================
+       MOTION HEADING
+    ========================================= */
+
+    .motion-intro {
+
+        position: relative !important;
+
+        z-index: 5 !important;
+
+        display: block !important;
+
+        margin-bottom: 40px !important;
+    }
+
+
+    .motion-number {
+
+        margin-bottom: 18px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 3px !important;
+    }
+
+
+    .motion-title {
+
+        width: 100% !important;
+
+        max-width: none !important;
+
+        margin: 0 !important;
+    }
+
+
+    .motion-title h2 {
+
+        font-size:
+            clamp(3rem, 14vw, 5rem) !important;
+
+        line-height: .88 !important;
+
+        letter-spacing: -3px !important;
+    }
+
+
+    .motion-title p {
+
+        width: 100% !important;
+
+        max-width: 420px !important;
+
+        margin:
+            22px 0 0 !important;
+
+        font-size: 12px !important;
+
+        line-height: 1.7 !important;
+
+        color: #777 !important;
+    }
+
+
+    /* =========================================
+       MOBILE VIDEO TRACK
+    ========================================= */
+
+    .motion-showcase {
+
+        position: relative !important;
+
+        width: calc(100% + 12%) !important;
+
+        margin-left: -6% !important;
+
+        display: flex !important;
+
+        align-items: flex-start !important;
+
+        justify-content: flex-start !important;
+
+        gap: 18px !important;
+
+        min-height: auto !important;
+
+        padding:
+            10px 7% 30px !important;
+
+        overflow-x: auto !important;
+
+        overflow-y: visible !important;
+
+        scroll-snap-type:
+            x mandatory !important;
+
+        -webkit-overflow-scrolling: touch !important;
+
+        scrollbar-width: none !important;
+    }
+
+
+    .motion-showcase::-webkit-scrollbar {
+        display: none !important;
+    }
+
+
+    /* =========================================
+       ALL THREE CARDS
+    ========================================= */
+
+    .motion-preview,
+    .motion-featured {
+
+        position: relative !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        flex-shrink: 0 !important;
+
+        margin: 0 !important;
+
+        transform: none !important;
+
+        scroll-snap-align: center !important;
+    }
+
+
+    /* SIDE VIDEOS */
+
+    .motion-preview {
+
+        width: 72% !important;
+
+        flex-basis: 72% !important;
+
+        opacity: .82;
+    }
+
+
+    /* MIDDLE / FEATURED VIDEO */
+
+    .motion-featured {
+
+        width: 70% !important;
+
+        flex-basis: 70% !important;
+
+        max-width: none !important;
+
+        order: 2 !important;
+
+        z-index: 5 !important;
+    }
+
+
+    .preview-left {
+        order: 1 !important;
+    }
+
+
+    .preview-right {
+        order: 3 !important;
+    }
+
+
+    /* =========================================
+       REEL FRAME
+    ========================================= */
+
+    .featured-frame {
+
+        position: relative !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        aspect-ratio: 9 / 16 !important;
+
+        overflow: hidden !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        border-radius: 8px !important;
+
+        background: #050505 !important;
+    }
+
+
+    /* REEL VIDEO */
+
+    .featured-frame video {
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        max-width: 100% !important;
+
+        max-height: 100% !important;
+
+        display: block !important;
+
+        object-fit: contain !important;
+
+        background: #050505 !important;
+    }
+
+
+    /* =========================================
+       SIDE VIDEO FRAMES
+    ========================================= */
+
+    .motion-frame {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        aspect-ratio: auto !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        justify-content: center !important;
+
+        overflow: hidden !important;
+
+        background: #050505 !important;
+
+        border-radius: 7px !important;
+    }
+
+
+    .motion-frame video {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        max-width: 100% !important;
+
+        max-height: none !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* =========================================
+       INFORMATION
+    ========================================= */
+
+    .motion-preview-title {
+
+        margin-top: 12px !important;
+
+        padding-left: 2px !important;
+    }
+
+
+    .motion-preview-title span {
+
+        font-size: 7px !important;
+
+        letter-spacing: 2px !important;
+    }
+
+
+    .motion-preview-title strong {
+
+        font-size: 13px !important;
+    }
+
+
+    .featured-info {
+
+        padding-top: 14px !important;
+    }
+
+
+    .featured-info h3 {
+
+        font-size: 16px !important;
+    }
+
+
+    /* =========================================
+       BACKGROUND TEXT
+    ========================================= */
+
+    .motion-bg-text {
+
+        top: 25% !important;
+
+        left: 50% !important;
+
+        font-size: 45vw !important;
+
+        z-index: 0 !important;
+    }
+
+
+    /* =========================================
+       BOTTOM LABEL
+    ========================================= */
+
+    .motion-bottom {
+
+        position: relative !important;
+
+        z-index: 5 !important;
+
+        margin-top: 25px !important;
+
+        gap: 9px !important;
+
+        font-size: 6px !important;
+
+        letter-spacing: 2px !important;
+    }
+
+}
+/* =========================================================
+   ROYAL DESIGNS — CLEAN FINAL MOBILE SYSTEM
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    body {
+        padding-top: 70px;
+    }
+
+    nav {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+
+        width: 100% !important;
+        height: 70px !important;
+
+        padding: 0 20px !important;
+
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        flex-wrap: nowrap !important;
+
+        background: rgba(5,5,5,.94) !important;
+
+        backdrop-filter: blur(20px) !important;
+        -webkit-backdrop-filter: blur(20px) !important;
+
+        border-bottom: 1px solid rgba(255,255,255,.08);
+
+        z-index: 999999 !important;
+    }
+
+
+    /* LOGO */
+
+    nav .logo {
+        display: flex !important;
+        align-items: center !important;
+
+        flex: 0 0 auto !important;
+    }
+
+    nav .logo-img {
+        width: 42px !important;
+        height: auto !important;
+    }
+
+
+    /* HAMBURGER */
+
+    nav .menu-toggle {
+        display: flex !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        color: white !important;
+
+        cursor: pointer;
+
+        z-index: 1000001 !important;
+
+        border-radius: 50%;
+
+        background: rgba(255,255,255,.05);
+
+        border: 1px solid rgba(255,255,255,.1);
+    }
+
+
+    nav .menu-toggle i {
+        font-size: 16px !important;
+    }
+
+
+    /* HIDE DESKTOP BUTTON */
+
+    nav .nav-btn {
+        display: none !important;
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    nav .nav-links {
+
+        position: fixed !important;
+
+        top: 70px !important;
+        left: 0 !important;
+        right: auto !important;
+
+        width: 100% !important;
+        height: calc(100vh - 70px) !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 28px !important;
+
+        padding: 30px !important;
+        margin: 0 !important;
+
+        background: rgba(3,3,3,.98) !important;
+
+        backdrop-filter: blur(25px) !important;
+        -webkit-backdrop-filter: blur(25px) !important;
+
+        transform: translateX(100%) !important;
+
+        transition:
+            transform .45s cubic-bezier(.77,0,.18,1) !important;
+
+        z-index: 1000000 !important;
+    }
+
+
+    nav .nav-links.active {
+
+        transform: translateX(0) !important;
+
+    }
+
+
+    nav .nav-links li {
+        list-style: none !important;
+    }
+
+
+    nav .nav-links li a {
+
+        display: block !important;
+
+        color: white !important;
+
+        text-decoration: none !important;
+
+        font-size: 22px !important;
+
+        font-weight: 500 !important;
+
+        padding: 5px !important;
+
+        transition: .3s ease;
+    }
+
+
+    nav .nav-links li a:hover {
+        color: #00d4ff !important;
+    }
+
+
+    /* =========================
+       MOTION SECTION
+    ========================= */
+
+    .motion-section {
+
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        padding:
+            80px 0 70px !important;
+
+        overflow: hidden !important;
+
+        position: relative !important;
+
+        z-index: 1 !important;
+    }
+
+
+    /* =========================
+       MOTION INTRO
+    ========================= */
+
+    .motion-intro {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        padding: 0 7% !important;
+
+        margin-bottom: 40px !important;
+    }
+
+
+    .motion-number {
+
+        margin-bottom: 18px !important;
+
+        font-size: 8px !important;
+
+        letter-spacing: 3px !important;
+    }
+
+
+    .motion-title {
+
+        width: 100% !important;
+
+        max-width: none !important;
+
+        margin: 0 !important;
+    }
+
+
+    .motion-title h2 {
+
+        font-size:
+            clamp(3rem, 14vw, 5rem) !important;
+
+        line-height: .88 !important;
+
+        letter-spacing: -3px !important;
+    }
+
+
+    .motion-title p {
+
+        width: 100% !important;
+
+        max-width: 400px !important;
+
+        margin: 22px 0 0 !important;
+
+        font-size: 12px !important;
+
+        line-height: 1.7 !important;
+    }
+
+
+    /* =========================
+       VIDEO SLIDER
+    ========================= */
+
+    .motion-showcase {
+
+        width: 100% !important;
+
+        min-height: auto !important;
+
+        margin: 0 !important;
+
+        padding:
+            10px 8% 35px !important;
+
+        display: flex !important;
+
+        align-items: flex-start !important;
+
+        justify-content: flex-start !important;
+
+        gap: 18px !important;
+
+        overflow-x: auto !important;
+
+        overflow-y: hidden !important;
+
+        scroll-snap-type:
+            x mandatory !important;
+
+        -webkit-overflow-scrolling:
+            touch !important;
+
+        scrollbar-width: none !important;
+    }
+
+
+    .motion-showcase::-webkit-scrollbar {
+        display: none !important;
+    }
+
+
+    /* =========================
+       ALL VIDEO CARDS
+    ========================= */
+
+    .motion-preview,
+    .motion-featured {
+
+        position: relative !important;
+
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+
+        transform: none !important;
+
+        flex-shrink: 0 !important;
+
+        scroll-snap-align: center !important;
+
+        margin: 0 !important;
+    }
+
+
+    /* SIDE VIDEOS */
+
+    .motion-preview {
+
+        width: 76% !important;
+
+        flex-basis: 76% !important;
+
+        opacity: .85;
+    }
+
+
+    /* =========================
+       MIDDLE REEL
+    ========================= */
+
+    .motion-featured {
+
+        width: 68% !important;
+
+        flex-basis: 68% !important;
+
+        max-width: 330px !important;
+
+        order: 2 !important;
+
+        z-index: 5 !important;
+    }
+
+
+    .preview-left {
+        order: 1 !important;
+    }
+
+
+    .preview-right {
+        order: 3 !important;
+    }
+
+
+    /* =========================
+       REEL FRAME
+    ========================= */
+
+    .featured-frame {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        aspect-ratio: 9 / 16 !important;
+
+        overflow: hidden !important;
+
+        display: block !important;
+
+        background: #050505 !important;
+
+        border-radius: 8px !important;
+
+        border:
+            1px solid rgba(255,255,255,.15) !important;
+    }
+
+
+    .featured-frame video {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        height: 100% !important;
+
+        max-width: none !important;
+
+        max-height: none !important;
+
+        object-fit: contain !important;
+
+        background: #050505 !important;
+    }
+
+
+    /* =========================
+       SIDE VIDEO FRAME
+    ========================= */
+
+    .motion-frame {
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        aspect-ratio: auto !important;
+
+        overflow: hidden !important;
+
+        background: #050505 !important;
+
+        border-radius: 7px !important;
+    }
+
+
+    .motion-frame video {
+
+        display: block !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        max-width: 100% !important;
+
+        max-height: none !important;
+
+        object-fit: contain !important;
+    }
+
+
+    /* =========================
+       FEATURE INFO
+    ========================= */
+
+    .featured-info {
+
+        padding-top: 14px !important;
+    }
+
+
+    .featured-info h3 {
+
+        font-size: 16px !important;
+    }
+
+
+    /* =========================
+       PREVIEW INFO
+    ========================= */
+
+    .motion-preview-title {
+
+        margin-top: 12px !important;
+
+        padding-left: 2px !important;
+    }
+
+
+    /* =========================
+       BACKGROUND WORD
+    ========================= */
+
+    .motion-bg-text {
+
+        font-size: 45vw !important;
+
+        top: 25% !important;
+
+        z-index: 0 !important;
+    }
+
+
+    /* =========================
+       BOTTOM TEXT
+    ========================= */
+
+    .motion-bottom {
+
+        margin-top: 20px !important;
+
+        gap: 9px !important;
+
+        font-size: 6px !important;
+
+        letter-spacing: 2px !important;
+    }
+
+}
