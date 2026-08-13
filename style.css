@@ -2913,3 +2913,219 @@ font-size:2.5rem;
     }
 
 }
+/* =========================================================
+   ROYAL DESIGNS — FAST LOADER
+========================================================= */
+
+#loader {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: #030303;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99999;
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transition:
+        opacity .6s ease,
+        visibility .6s ease;
+}
+
+
+/* WHEN LOADING IS FINISHED */
+
+#loader.loaded {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+}
+
+
+/* CONTENT */
+
+.loader-content {
+
+    width: min(320px, 80%);
+
+    text-align: center;
+}
+
+
+/* LOGO */
+
+.loader-content img {
+
+    width: 75px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto 20px;
+
+    animation:
+        loaderLogo 1s ease;
+}
+
+
+@keyframes loaderLogo {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.75);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* TITLE */
+
+.loader-content h2 {
+
+    margin: 0;
+
+    color: #fff;
+
+    font-family:
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: 5px;
+}
+
+
+/* SUBTITLE */
+
+.loader-content p {
+
+    margin-top: 9px;
+
+    color: #555;
+
+    font-family:
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 3px;
+}
+
+
+/* PROGRESS */
+
+.loader-progress {
+
+    margin-top: 32px;
+
+    width: 100%;
+}
+
+
+/* TRACK */
+
+.loader-track {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 2px;
+
+    background: #1b1b1b;
+
+    overflow: hidden;
+}
+
+
+/* MOVING BAR */
+
+#loader-bar {
+
+    display: block;
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #1748ff,
+            #00d4ff
+        );
+
+    box-shadow:
+        0 0 12px rgba(0,212,255,.7);
+
+    transition:
+        width .12s linear;
+}
+
+
+/* BOTTOM TEXT */
+
+.loader-bottom {
+
+    margin-top: 9px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #444;
+
+    font-family:
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+/* PERCENTAGE */
+
+#loader-percent {
+
+    color: #00d4ff;
+
+    min-width: 35px;
+
+    text-align: right;
+}

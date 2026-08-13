@@ -1,21 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <div id="loader">
 
-    <div class="loader-content">
-
-        <img src="logo1.png" alt="Royal Designs">
-
-        <h2>ROYAL DESIGNS</h2>
-
-        <p>Crafting Visual Excellence</p>
-
-        <div class="loader-line">
-            <span></span>
-        </div>
-
-    </div>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +15,37 @@
 
 <body>
     
+    <!-- ================= LOADER ================= -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <img src="logo1.png" alt="Royal Designs">
+
+        <h2>ROYAL DESIGNS</h2>
+
+        <p>CRAFTING VISUAL EXCELLENCE</p>
+
+        <div class="loader-progress">
+
+            <div class="loader-track">
+                <span id="loader-bar"></span>
+            </div>
+
+            <div class="loader-bottom">
+
+                <span>LOADING</span>
+
+                <span id="loader-percent">0%</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 </div>
 
@@ -406,6 +423,19 @@
         <h3>Packaging image 10</h3>
         <p>Packaging</p>
     </div>
+
+    </article><article class="portfolio-item">
+    <img src="fly9.png" alt="Packaging image 12">
+    <div class="overlay">
+        <h3>Packaging image 10</h3>
+        <p>Packaging</p>
+    </div>
+      </article><article class="portfolio-item">
+    <img src="fly10.png" alt="Packaging image 12">
+    <div class="overlay">
+        <h3>Packaging image 10</h3>
+        <p>Packaging</p>
+    </div>
 </article>
         </div></section>
 
@@ -441,19 +471,121 @@
 
 <script>
 
-window.addEventListener("load",()=>{
+/* =====================================================
+   ROYAL DESIGNS — LOADER
+===================================================== */
 
 const loader = document.getElementById("loader");
+const loaderBar = document.getElementById("loader-bar");
+const loaderPercent = document.getElementById("loader-percent");
 
-loader.style.opacity="0";
+let progress = 0;
+let pageLoaded = false;
 
-setTimeout(()=>{
 
-loader.style.display="none";
+/* -----------------------------------------
+   MOVE THE PROGRESS BAR
+----------------------------------------- */
 
-},1000);
+const progressTimer = setInterval(() => {
+
+    if (progress < 85) {
+
+        progress += Math.random() * 8;
+
+        if (progress > 85) {
+            progress = 85;
+        }
+
+        updateLoader();
+
+    }
+
+}, 100);
+
+
+/* -----------------------------------------
+   UPDATE DISPLAY
+----------------------------------------- */
+
+function updateLoader() {
+
+    const rounded =
+        Math.floor(progress);
+
+    loaderBar.style.width =
+        rounded + "%";
+
+    loaderPercent.textContent =
+        rounded + "%";
+}
+
+
+/* -----------------------------------------
+   PAGE FINISHED LOADING
+----------------------------------------- */
+
+window.addEventListener("load", () => {
+
+    pageLoaded = true;
+
+    clearInterval(progressTimer);
+
+    /* quickly move from current progress to 100 */
+
+    const finishTimer = setInterval(() => {
+
+        progress += 4;
+
+        if (progress >= 100) {
+
+            progress = 100;
+
+            updateLoader();
+
+            clearInterval(finishTimer);
+
+            setTimeout(() => {
+
+                loader.classList.add("loaded");
+
+            }, 150);
+
+        } else {
+
+            updateLoader();
+
+        }
+
+    }, 35);
 
 });
+
+
+/* -----------------------------------------
+   SAFETY LIMIT
+   Never leave visitor staring at loader
+----------------------------------------- */
+
+setTimeout(() => {
+
+    if (!pageLoaded) {
+
+        clearInterval(progressTimer);
+
+        progress = 100;
+
+        updateLoader();
+
+        setTimeout(() => {
+
+            loader.classList.add("loaded");
+
+        }, 150);
+
+    }
+
+}, 1800);
 
 </script>
 
