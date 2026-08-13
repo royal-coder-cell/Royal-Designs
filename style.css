@@ -3457,19 +3457,957 @@ font-size:2.5rem;
         0 0 20px rgba(0, 212, 255, 0.25);
 }
 /* =========================================
-   REMOVE EXTRA SPACE UNDER PORTFOLIO FILTER
+   PORTFOLIO — TIGHTEN FIRST ROW
 ========================================= */
 
 .portfolio-filter {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     margin-bottom: 0 !important;
 }
 
-.portfolio-grid {
+.portfolio-grid,
+.portfolio-masonry,
+.portfolio-gallery {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
 
-.portfolio-section {
+.portfolio-section,
+.portfolio-category,
+.category-section {
     margin-top: 0 !important;
     padding-top: 0 !important;
+}
+/* =========================================================
+   ROYAL DESIGNS — MOTION EXPERIENCE
+========================================================= */
+
+.motion-section {
+
+    position: relative;
+
+    min-height: 900px;
+
+    padding: 150px 6% 110px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(0, 70, 255, .10),
+            transparent 40%
+        ),
+        #030303;
+}
+
+
+/* =========================================================
+   GIANT BACKGROUND WORD
+========================================================= */
+
+.motion-bg-text {
+
+    position: absolute;
+
+    top: 18%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    font-size:
+        clamp(12rem, 28vw, 30rem);
+
+    line-height: .7;
+
+    font-weight: 900;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(255,255,255,.035);
+
+    pointer-events: none;
+
+    user-select: none;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.motion-intro {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 80px;
+}
+
+
+.motion-number {
+
+    color: #00d4ff;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    padding-top: 10px;
+}
+
+
+.motion-title {
+
+    max-width: 700px;
+
+    margin-right: 5%;
+}
+
+
+.motion-title h2 {
+
+    margin: 0;
+
+    font-size:
+        clamp(4rem, 7vw, 8rem);
+
+    line-height: .8;
+
+    letter-spacing: -5px;
+
+    font-weight: 800;
+}
+
+
+.motion-title h2 span {
+
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke:
+        1px rgba(255,255,255,.8);
+}
+
+
+.motion-title p {
+
+    max-width: 400px;
+
+    margin-top: 30px;
+
+    margin-left: auto;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SHOWCASE
+========================================================= */
+
+.motion-showcase {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: 100%;
+
+    min-height: 500px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =========================================================
+   VIDEO PREVIEWS
+========================================================= */
+
+.motion-preview {
+
+    position: absolute;
+
+    width: 25%;
+
+    z-index: 2;
+
+    transition:
+        transform .6s cubic-bezier(.2,.8,.2,1),
+        opacity .5s ease;
+}
+
+
+/* LEFT */
+
+.preview-left {
+
+    left: 0;
+
+    transform:
+        translateY(30px)
+        rotate(-7deg);
+}
+
+
+/* RIGHT */
+
+.preview-right {
+
+    right: 0;
+
+    transform:
+        translateY(30px)
+        rotate(7deg);
+}
+
+
+/* =========================================================
+   VIDEO FRAME
+========================================================= */
+
+.motion-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #080808;
+
+    border:
+        1px solid rgba(255,255,255,.14);
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.7);
+}
+
+
+/* IMPORTANT:
+   DON'T FORCE VIDEO INTO A RATIO
+*/
+
+.motion-frame video {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 360px;
+
+    object-fit: contain;
+
+    background: #050505;
+}
+
+
+/* =========================================================
+   MAIN FEATURE
+========================================================= */
+
+.motion-featured {
+
+    position: relative;
+
+    width: 52%;
+
+    z-index: 5;
+
+    transition:
+        transform .6s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.featured-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,.16);
+
+    border-radius: 8px;
+
+    background: #060606;
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.8),
+        0 0 80px rgba(0,70,255,.08);
+}
+
+
+/* MAIN VIDEO */
+
+.featured-frame video {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 520px;
+
+    object-fit: contain;
+
+    background: #050505;
+
+    transition:
+        transform .8s ease;
+}
+
+
+/* =========================================================
+   MAIN HOVER
+========================================================= */
+
+.motion-featured:hover {
+
+    transform:
+        scale(1.025);
+}
+
+
+.motion-featured:hover
+.featured-frame video {
+
+    transform:
+        scale(1.02);
+}
+
+
+/* =========================================================
+   NUMBER TAGS
+========================================================= */
+
+.motion-frame-number,
+.featured-number {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    z-index: 5;
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,0,0,.45);
+
+    backdrop-filter:
+        blur(10px);
+
+    color: white;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+
+.featured-number {
+
+    width: 40px;
+
+    height: 40px;
+
+    top: 20px;
+
+    left: 20px;
+
+    color: #00d4ff;
+
+    border-color:
+        rgba(0,212,255,.5);
+}
+
+
+/* FEATURED LABEL */
+
+.featured-label {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 20px;
+
+    padding: 8px 12px;
+
+    border:
+        1px solid rgba(0,212,255,.35);
+
+    border-radius: 50px;
+
+    background:
+        rgba(0,212,255,.08);
+
+    backdrop-filter:
+        blur(10px);
+
+    color: #00d4ff;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   PROJECT TITLES
+========================================================= */
+
+.motion-preview-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 14px;
+
+    padding-left: 4px;
+}
+
+
+.motion-preview-title span {
+
+    color: #555;
+
+    font-size: 7px;
+
+    letter-spacing: 2px;
+}
+
+
+.motion-preview-title strong {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   FEATURE INFO
+========================================================= */
+
+.featured-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 18px;
+}
+
+
+.featured-info span {
+
+    color: #555;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+}
+
+
+.featured-info h3 {
+
+    margin-top: 6px;
+
+    font-size: 19px;
+
+    font-weight: 500;
+}
+
+
+.motion-arrow {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    border-radius: 50%;
+
+    color: #00d4ff;
+
+    transition: .3s ease;
+}
+
+
+.motion-featured:hover
+.motion-arrow {
+
+    background: #00d4ff;
+
+    color: #000;
+
+    transform:
+        rotate(45deg);
+}
+
+
+/* =========================================================
+   PREVIEW HOVER
+========================================================= */
+
+.motion-preview:hover {
+
+    z-index: 10;
+}
+
+.preview-left:hover {
+
+    transform:
+        translateY(10px)
+        rotate(-2deg)
+        scale(1.04);
+}
+
+
+.preview-right:hover {
+
+    transform:
+        translateY(10px)
+        rotate(2deg)
+        scale(1.04);
+}
+
+
+/* =========================================================
+   BOTTOM STATEMENT
+========================================================= */
+
+.motion-bottom {
+
+    position: relative;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    margin-top: 90px;
+
+    color: #444;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+}
+
+
+.motion-bottom i {
+
+    color: #00d4ff;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .motion-section {
+
+        padding:
+            110px 5% 90px;
+    }
+
+
+    .motion-preview {
+
+        width: 23%;
+    }
+
+
+    .motion-featured {
+
+        width: 55%;
+    }
+
+
+    .featured-frame {
+
+        min-height: 350px;
+    }
+
+
+    .motion-frame {
+
+        min-height: 220px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .motion-section {
+
+        min-height: auto;
+
+        padding:
+            90px 6% 70px;
+    }
+
+
+    .motion-bg-text {
+
+        top: 25%;
+
+        font-size: 45vw;
+    }
+
+
+    .motion-intro {
+
+        display: block;
+
+        margin-bottom: 45px;
+    }
+
+
+    .motion-number {
+
+        margin-bottom: 20px;
+    }
+
+
+    .motion-title {
+
+        margin: 0;
+    }
+
+
+    .motion-title h2 {
+
+        font-size:
+            clamp(3.5rem, 15vw, 6rem);
+
+        letter-spacing: -3px;
+    }
+
+
+    .motion-title p {
+
+        margin:
+            25px 0 0;
+
+        max-width: 100%;
+
+        font-size: 12px;
+    }
+
+
+    /* HORIZONTAL MOBILE GALLERY */
+
+    .motion-showcase {
+
+        display: flex;
+
+        align-items: flex-start;
+
+        justify-content: flex-start;
+
+        gap: 18px;
+
+        min-height: auto;
+
+        overflow-x: auto;
+
+        overflow-y: visible;
+
+        padding:
+            15px 10% 30px;
+
+        margin:
+            0 -6%;
+
+        scroll-snap-type:
+            x mandatory;
+
+        scrollbar-width: none;
+    }
+
+
+    .motion-showcase::-webkit-scrollbar {
+
+        display: none;
+    }
+
+
+    .motion-preview,
+    .motion-featured {
+
+        position: relative;
+
+        flex: 0 0 82%;
+
+        width: 82%;
+
+        left: auto;
+
+        right: auto;
+
+        top: auto;
+
+        bottom: auto;
+
+        transform: none;
+
+        scroll-snap-align: center;
+    }
+
+
+    .motion-preview:hover,
+    .preview-left:hover,
+    .preview-right:hover {
+
+        transform: none;
+    }
+
+
+    .featured-frame,
+    .motion-frame {
+
+        min-height: 0;
+
+        height: auto;
+
+        aspect-ratio: auto;
+    }
+
+
+    .featured-frame video,
+    .motion-frame video {
+
+        width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        object-fit: contain;
+    }
+
+
+    .motion-featured {
+
+        order: 1;
+    }
+
+
+    .preview-left {
+
+        order: 2;
+    }
+
+
+    .preview-right {
+
+        order: 3;
+    }
+
+
+    .featured-info {
+
+        padding-top: 14px;
+    }
+
+
+    .motion-bottom {
+
+        margin-top: 35px;
+
+        gap: 10px;
+
+        font-size: 6px;
+
+        letter-spacing: 2px;
+    }
+
+}
+/* =========================================================
+   MIDDLE MOTION VIDEO — REEL FORMAT
+   9:16 VERTICAL
+========================================================= */
+
+.motion-featured {
+    width: 360px;
+    max-width: 100%;
+}
+
+
+/* Vertical Reel frame */
+
+.featured-frame {
+    width: 100%;
+    aspect-ratio: 9 / 16;
+
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #050505;
+
+    border-radius: 8px;
+
+    border: 1px solid rgba(255,255,255,.16);
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.8),
+        0 0 80px rgba(0,70,255,.08);
+}
+
+
+/* Keep the actual video inside the Reel frame */
+
+.featured-frame video {
+    width: 100%;
+    height: 100%;
+
+    max-height: none;
+
+    object-fit: contain;
+
+    display: block;
+
+    background: #050505;
+}
+
+
+/* Keep side videos smaller */
+
+.motion-preview {
+    width: 25%;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .motion-featured {
+
+        flex: 0 0 72%;
+
+        width: 72%;
+
+        max-width: none;
+    }
+
+    .featured-frame {
+
+        width: 100%;
+
+        aspect-ratio: 9 / 16;
+
+        min-height: 0;
+    }
+
+    .featured-frame video {
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+    }
+
 }
