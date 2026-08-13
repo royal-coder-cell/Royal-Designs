@@ -3129,3 +3129,347 @@ font-size:2.5rem;
 
     text-align: right;
 }
+/* =========================================================
+   ABOUT HERO — MOBILE FIX
+   Paste at the VERY BOTTOM of style.css
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+    .about-hero {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-height: auto;
+
+        padding: 0;
+
+        overflow: hidden;
+
+        background: #050505;
+    }
+
+
+    /* =========================================
+       PHOTO
+    ========================================= */
+
+    .about-image {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: 100%;
+        height: 70svh;
+
+        flex-shrink: 0;
+
+        overflow: hidden;
+
+        z-index: 1;
+    }
+
+
+    .about-image img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: cover;
+
+        /* Adjust this if you want to move the
+           person higher/lower */
+        object-position: center top;
+
+        transform: none;
+    }
+
+
+    /* =========================================
+       PHOTO → BLACK FADE
+    ========================================= */
+
+    .about-image::after {
+        content: "";
+
+        position: absolute;
+
+        inset: 0;
+
+        z-index: 2;
+
+        pointer-events: none;
+
+        background:
+
+            /* subtle side darkness */
+            linear-gradient(
+                to right,
+                rgba(5,5,5,.25),
+                transparent 35%,
+                transparent 65%,
+                rgba(5,5,5,.25)
+            ),
+
+            /* strong bottom fade */
+            linear-gradient(
+                to bottom,
+                transparent 50%,
+                rgba(5,5,5,.25) 65%,
+                rgba(5,5,5,.75) 82%,
+                #050505 100%
+            );
+    }
+
+
+    /* =========================================
+       TEXT — NOW BELOW PHOTO
+    ========================================= */
+
+    .about-content {
+        position: relative;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding:
+            5px 7% 65px;
+
+        z-index: 5;
+
+        background: #050505;
+    }
+
+
+    /* =========================================
+       TAG
+    ========================================= */
+
+    .about-content .hero-tag {
+
+        margin: 0 0 15px;
+
+        font-size: 9px;
+
+        line-height: 1.5;
+
+        letter-spacing: 2px;
+
+        color: #00d4ff;
+    }
+
+
+    /* =========================================
+       NAME
+    ========================================= */
+
+    .about-content h1 {
+
+        margin: 0;
+
+        font-size:
+            clamp(3.2rem, 14vw, 5rem);
+
+        line-height: .88;
+
+        letter-spacing: -2px;
+
+        white-space: normal;
+
+        color: white;
+    }
+
+
+    .about-content h1 span {
+
+        display: block;
+
+        margin-top: 3px;
+
+        color: transparent;
+
+        -webkit-text-stroke:
+            1px white;
+    }
+
+
+    /* =========================================
+       PROFESSION
+    ========================================= */
+
+    .about-content h3 {
+
+        margin-top: 20px;
+
+        max-width: 450px;
+
+        font-size: 14px;
+
+        line-height: 1.5;
+
+        font-weight: 500;
+
+        color: #e5e5e5;
+    }
+
+
+    /* =========================================
+       DESCRIPTION
+    ========================================= */
+
+    .about-content > p:not(.hero-tag) {
+
+        max-width: 430px;
+
+        margin-top: 14px;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+
+        color: #888;
+    }
+
+
+    /* =========================================
+       BUTTONS
+    ========================================= */
+
+    .hero-buttons {
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        margin-top: 22px;
+    }
+
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-secondary {
+
+        padding:
+            12px 20px;
+
+        font-size: 11px;
+    }
+
+}
+/* =====================================================
+   STICKY PORTFOLIO CATEGORY NAVIGATION
+===================================================== */
+
+.portfolio-filter {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    padding: 14px 20px;
+
+    overflow-x: auto;
+
+    white-space: nowrap;
+
+    background: rgba(3, 3, 3, 0.88);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    scrollbar-width: none;
+}
+
+.portfolio-filter::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* CATEGORY BUTTONS */
+
+.portfolio-filter a {
+
+    flex-shrink: 0;
+
+    padding: 9px 16px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 50px;
+
+    color: #888;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    transition:
+        all 0.3s ease;
+}
+
+
+/* HOVER */
+
+.portfolio-filter a:hover {
+
+    color: white;
+
+    border-color:
+        rgba(0, 212, 255, 0.5);
+
+    background:
+        rgba(0, 212, 255, 0.08);
+}
+
+
+/* ACTIVE */
+
+.portfolio-filter a.active {
+
+    color: #000;
+
+    background: #00d4ff;
+
+    border-color: #00d4ff;
+
+    box-shadow:
+        0 0 20px rgba(0, 212, 255, 0.25);
+}
+/* =========================================
+   REMOVE EXTRA SPACE UNDER PORTFOLIO FILTER
+========================================= */
+
+.portfolio-filter {
+    margin-bottom: 0 !important;
+}
+
+.portfolio-grid {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.portfolio-section {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
