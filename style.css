@@ -5457,3 +5457,438 @@ font-size:2.5rem;
 img {
     content-visibility: auto;
 }
+/* =========================================================
+   HOMEPAGE FINAL CTA
+========================================================= */
+
+.home-cta {
+    position: relative;
+
+    padding: 150px 7%;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,212,255,.08),
+            transparent 55%
+        );
+}
+
+
+.home-cta > span {
+    color: #00d4ff;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+
+.home-cta h2 {
+    margin: 25px auto;
+
+    max-width: 900px;
+
+    font-size: clamp(50px, 8vw, 110px);
+
+    line-height: .85;
+
+    letter-spacing: -6px;
+}
+
+
+.home-cta h2 em {
+    display: block;
+
+    color: transparent;
+
+    -webkit-text-stroke: 1px white;
+
+    font-style: normal;
+}
+
+
+.home-cta p {
+    max-width: 450px;
+
+    margin: 0 auto 35px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.home-cta a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 14px 22px;
+
+    border: 1px solid rgba(255,255,255,.2);
+
+    border-radius: 50px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    transition: .3s ease;
+}
+
+
+.home-cta a:hover {
+    background: #00d4ff;
+
+    border-color: #00d4ff;
+
+    color: #000;
+
+    gap: 25px;
+}
+
+/* =========================================================
+   GLOWING CROWN — FINAL CTA
+========================================================= */
+
+.cta-crown {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #00d4ff;
+
+    font-size: 32px;
+
+    border: 1px solid rgba(0, 212, 255, .25);
+
+    border-radius: 50%;
+
+    background: rgba(0, 212, 255, .03);
+
+    animation: crownGlow 2.8s ease-in-out infinite;
+}
+
+
+/* GLOW ON → OFF → ON */
+
+@keyframes crownGlow {
+
+    0%,
+    100% {
+
+        opacity: .45;
+
+        transform: translateY(0);
+
+        box-shadow:
+            0 0 0 rgba(0,212,255,0);
+
+        text-shadow:
+            0 0 5px rgba(0,212,255,.2);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform: translateY(-4px);
+
+        box-shadow:
+            0 0 20px rgba(0,212,255,.25),
+            0 0 50px rgba(0,212,255,.08);
+
+        text-shadow:
+            0 0 8px #00d4ff,
+            0 0 25px rgba(0,212,255,.7),
+            0 0 45px rgba(0,212,255,.35);
+    }
+
+}
+/* =========================================================
+   ROYAL DESIGNS — LIQUID LOGO LOADER
+========================================================= */
+
+.royal-loader {
+
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100vh !important;
+
+    background: #000 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    overflow: hidden !important;
+
+    z-index: 999999 !important;
+
+}
+
+
+/* =========================================================
+   LOGO AREA
+========================================================= */
+
+.royal-logo-loader {
+
+    position: relative;
+
+    width: 160px;
+    height: 160px;
+
+}
+
+
+/* =========================================================
+   HOLLOW LOGO
+========================================================= */
+
+.royal-logo-outline {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    filter:
+        grayscale(1)
+        brightness(0)
+        invert(1);
+
+    opacity: .25;
+
+}
+
+
+/* =========================================================
+   LIQUID FILL
+========================================================= */
+
+.royal-logo-liquid {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 0;
+
+    overflow: hidden;
+
+    animation:
+        royalLiquidRise
+        2.5s
+        cubic-bezier(.65,0,.2,1)
+        forwards;
+
+}
+
+
+/* THE LOGO INSIDE THE LIQUID */
+
+.royal-logo-liquid img {
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 160px;
+    height: 160px;
+
+    object-fit: contain;
+
+    filter:
+        brightness(0)
+        invert(1)
+        drop-shadow(
+            0 0 12px rgba(255,255,255,.9)
+        );
+
+}
+
+
+/* =========================================================
+   LIQUID RISE
+========================================================= */
+
+@keyframes royalLiquidRise {
+
+    0% {
+        height: 0%;
+    }
+
+    15% {
+        height: 8%;
+    }
+
+    30% {
+        height: 20%;
+    }
+
+    50% {
+        height: 42%;
+    }
+
+    70% {
+        height: 65%;
+    }
+
+    85% {
+        height: 85%;
+    }
+
+    100% {
+        height: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.royal-logo-loader::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -40px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,.18),
+            transparent 65%
+        );
+
+    opacity: 0;
+
+    animation:
+        royalGlow
+        1s
+        ease
+        2.2s
+        forwards;
+
+    pointer-events: none;
+
+}
+
+
+@keyframes royalGlow {
+
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+
+}
+
+
+/* =========================================================
+   FINAL LOGO BURST
+========================================================= */
+
+.royal-logo-loader {
+
+    animation:
+        royalLogoBurst
+        .8s
+        cubic-bezier(.2,.8,.2,1)
+        2.7s
+        forwards;
+
+}
+
+
+@keyframes royalLogoBurst {
+
+    0% {
+        transform: scale(1);
+    }
+
+    35% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1.25);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   LOADER EXIT
+========================================================= */
+
+.royal-loader {
+
+    animation:
+        royalLoaderExit
+        .7s
+        ease
+        3.2s
+        forwards;
+
+}
+
+
+@keyframes royalLoaderExit {
+
+    to {
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+    }
+
+}
