@@ -5454,3 +5454,6 @@ font-size:2.5rem;
     }
 
 }
+img {
+    content-visibility: auto;
+}
