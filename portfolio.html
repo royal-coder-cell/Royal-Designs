@@ -76,10 +76,80 @@
                 <article class="portfolio-item"><a class="portfolio-link" href="#album-covers"><img src="Alb cv 1.png" alt="Album cover"><div class="overlay"><h3>Album Cover</h3><p>Album Covers</p></div></a></article>
                 <article class="portfolio-item"><a class="portfolio-link" href="#events"><img src="eve 1.png" alt="Events flyer"><div class="overlay"><h3>Events Flyers</h3><p>Events Flyers</p></div></a></article>
                 <article class="portfolio-item"><a class="portfolio-link" href="#logos"><img src="log 1.png" alt="Logo designs"><div class="overlay"><h3>Logo Designs</h3><p>Logos</p></div></a></article>
-                <article class="portfolio-item"><a class="portfolio-link" href="#packaging"><img src="chur 2.png" alt="Product packaging"><div class="overlay"><h3>Church Flyer Designs</h3><p>For all your church flyer needs</p></div></a></article>
+                <article class="portfolio-item"><a class="portfolio-link" href="#packaging"><img src="fly2.png" alt="Product packaging"><div class="overlay"><h3>Church Flyer Designs</h3><p>For all your church flyer needs</p></div></a></article>
                 <article class="portfolio-item"><a class="portfolio-link" href="#social"><img src="web2.png" alt="Instagram carousel"><div class="overlay"><h3>Model Designs</h3><p>Birthday & Model Designs</p></div></a></article>
             </div>
         </section>
+
+        <!-- =====================================================
+     INSTAGRAM CAROUSEL PROJECT
+===================================================== -->
+
+<section class="carousel-project">
+
+    <div class="carousel-heading">
+
+        <div>
+    
+
+            <h2>Instagram<br><em>Carousel</em></h2>
+        </div>
+
+        
+
+    </div>
+
+
+    <div class="carousel-wrapper">
+
+        <div class="carousel-track" id="instagramCarousel">
+
+            <div class="carousel-slide">
+                <img src="1-david.jpg" alt="Instagram carousel slide 1">
+            </div>
+
+            <div class="carousel-slide">
+                <img src="2-david.jpg" alt="Instagram carousel slide 2">
+            </div>
+
+            <div class="carousel-slide">
+                <img src="3-david.jpg" alt="Instagram carousel slide 3">
+            </div>
+
+            <div class="carousel-slide">
+                <img src="4-david.jpg" alt="Instagram carousel slide 4">
+            </div>
+
+            <div class="carousel-slide">
+                <img src="5-david.jpg" alt="Instagram carousel slide 5">
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+
+    <div class="carousel-controls">
+
+        <button id="carouselPrev" type="button">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+
+        <div class="carousel-counter">
+            <span id="carouselCurrent">01</span>
+            <span>/</span>
+            <span>05</span>
+        </div>
+
+        <button id="carouselNext" type="button">
+            <i class="fas fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</section>
 
         <!-- Each category has 10 positions: one main picture and nine slots for your own images. -->
         <section class="portfolio-section" id="branding"><h2 class="section-title">Branding</h2><p class="section-note">One main image is included. Add nine more branding projects below it.</p><div class="portfolio-grid">
@@ -601,7 +671,174 @@ setTimeout(() => {
 
 </script>
 
+<script>
+const carouselTrack = document.getElementById("instagramCarousel");
+const slides = document.querySelectorAll(".carousel-slide");
 
+const prevButton = document.getElementById("carouselPrev");
+const nextButton = document.getElementById("carouselNext");
+const currentNumber = document.getElementById("carouselCurrent");
+
+let currentSlide = 0;
+
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+
+
+/* =========================================
+   MOVE CAROUSEL
+========================================= */
+
+function updateCarousel() {
+
+    const slideWidth = slides[0].offsetWidth;
+
+    carouselTrack.style.transform =
+        `translateX(-${currentSlide * slideWidth}px)`;
+
+    currentNumber.textContent =
+        String(currentSlide + 1).padStart(2, "0");
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+nextButton.addEventListener("click", () => {
+
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
+        updateCarousel();
+    }
+
+});
+
+
+prevButton.addEventListener("click", () => {
+
+    if (currentSlide > 0) {
+        currentSlide--;
+        updateCarousel();
+    }
+
+});
+
+
+/* =========================================
+   SWIPE / DRAG
+========================================= */
+
+carouselTrack.addEventListener("pointerdown", (e) => {
+
+    startX = e.clientX;
+    currentX = startX;
+
+    isDragging = true;
+
+    carouselTrack.style.transition = "none";
+
+    carouselTrack.setPointerCapture(e.pointerId);
+
+});
+
+
+carouselTrack.addEventListener("pointermove", (e) => {
+
+    if (!isDragging) return;
+
+    currentX = e.clientX;
+
+    const movement = currentX - startX;
+
+    const slideWidth = slides[0].offsetWidth;
+
+    const basePosition =
+        -(currentSlide * slideWidth);
+
+    carouselTrack.style.transform =
+        `translateX(${basePosition + movement}px)`;
+
+});
+
+
+carouselTrack.addEventListener("pointerup", (e) => {
+
+    if (!isDragging) return;
+
+    isDragging = false;
+
+    const difference =
+        currentX - startX;
+
+    carouselTrack.style.transition =
+        "transform .65s cubic-bezier(.77,0,.18,1)";
+
+
+    /* SWIPE LEFT */
+
+    if (difference < -50) {
+
+        if (currentSlide < slides.length - 1) {
+            currentSlide++;
+        }
+
+    }
+
+
+    /* SWIPE RIGHT */
+
+    else if (difference > 50) {
+
+        if (currentSlide > 0) {
+            currentSlide--;
+        }
+
+    }
+
+
+    updateCarousel();
+
+});
+
+
+carouselTrack.addEventListener("pointercancel", () => {
+
+    isDragging = false;
+
+    carouselTrack.style.transition =
+        "transform .65s cubic-bezier(.77,0,.18,1)";
+
+    updateCarousel();
+
+});
+
+
+/* =========================================
+   MOBILE TOUCH
+========================================= */
+
+carouselTrack.style.touchAction = "pan-y";
+
+
+/* =========================================
+   INITIALIZE
+========================================= */
+
+updateCarousel();
+
+
+/* =========================================
+   RESIZE
+========================================= */
+
+window.addEventListener("resize", () => {
+
+    updateCarousel();
+
+});
+</script>
 
 </body>
 </html>

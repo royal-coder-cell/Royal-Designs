@@ -5892,3 +5892,304 @@ img {
     }
 
 }
+
+/* =========================================================
+   SEAMLESS INSTAGRAM CAROUSEL
+========================================================= */
+
+.carousel-project {
+    width: 100%;
+    padding: 120px 7%;
+    background: #050505;
+    overflow: hidden;
+}
+
+
+/* HEADER */
+
+.carousel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.carousel-heading span {
+    color: #00d4ff;
+    font-size: 9px;
+    letter-spacing: 4px;
+}
+
+.carousel-heading h2 {
+    margin: 18px 0 0;
+    font-size: clamp(50px, 7vw, 100px);
+    line-height: .85;
+    letter-spacing: -5px;
+}
+
+.carousel-heading h2 em {
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    font-style: normal;
+}
+
+.carousel-heading p {
+    max-width: 330px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   SEAMLESS VIEWPORT
+========================================================= */
+
+.carousel-wrapper {
+    width: 100%;
+
+    overflow: hidden;
+
+    cursor: grab;
+
+    /* remove any gaps around the carousel */
+    padding: 0;
+}
+
+
+.carousel-wrapper:active {
+    cursor: grabbing;
+}
+
+
+/* =========================================================
+   CONTINUOUS TRACK
+========================================================= */
+
+.carousel-track {
+
+    display: flex;
+
+    gap: 4px;
+
+    width: max-content;
+
+    transform: translateX(0);
+
+    transition:
+        transform .65s cubic-bezier(.77,0,.18,1);
+
+    user-select: none;
+}
+
+
+/* =========================================================
+   SLIDES
+========================================================= */
+
+.carousel-slide {
+
+    position: relative;
+
+    flex: 0 0 360px;
+
+    width: 360px;
+
+    margin: 0;
+
+    padding: 0;
+
+    overflow: hidden;
+
+    border-radius: 0;
+
+    border: none;
+
+    background: transparent;
+
+    box-shadow: none;
+
+    transform: none !important;
+}
+
+
+.carousel-slide img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    margin: 0;
+
+    padding: 0;
+
+    pointer-events: none;
+
+    user-select: none;
+
+    /* IMPORTANT:
+       don't crop the carousel artwork
+    */
+
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   REMOVE ACTIVE EFFECT
+========================================================= */
+
+.carousel-slide.active {
+    transform: none !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* =========================================================
+   CONTROLS
+========================================================= */
+
+.carousel-controls {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-top: 35px;
+}
+
+
+.carousel-controls button {
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border:
+        1px solid rgba(255,255,255,.15);
+
+    background: transparent;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+
+.carousel-controls button:hover {
+
+    background: #00d4ff;
+
+    color: #000;
+
+    border-color: #00d4ff;
+}
+
+
+.carousel-counter {
+
+    display: flex;
+
+    gap: 8px;
+
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+#carouselCurrent {
+    color: white;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .carousel-project {
+
+        padding: 90px 0;
+    }
+
+
+    .carousel-heading {
+
+        display: block;
+
+        padding: 0 7%;
+
+        margin-bottom: 40px;
+    }
+
+
+    .carousel-heading h2 {
+
+        font-size: 15vw;
+
+        letter-spacing: -3px;
+    }
+
+
+    .carousel-heading p {
+
+        margin-top: 25px;
+
+        max-width: 320px;
+    }
+
+
+    .carousel-wrapper {
+
+        width: 100%;
+
+        overflow: hidden;
+
+        padding: 0;
+    }
+
+
+    .carousel-track {
+
+        gap: 4px;
+    }
+
+
+    .carousel-slide {
+
+        flex: 0 0 78vw;
+
+        width: 78vw;
+
+        max-width: none;
+    }
+
+
+    .carousel-controls {
+
+        margin-top: 25px;
+    }
+
+}
